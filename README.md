@@ -1,39 +1,18 @@
-# Shopify App Template - Node
+# Shopify Vue App Template - Node
 
-This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
-
-Rather than cloning this repo, you can use your preferred package manager and the Shopify CLI with [these steps](#installing-the-template).
-
-## Benefits
-
-Shopify apps are built on a variety of Shopify tools to create a great merchant experience. The [create an app](https://shopify.dev/docs/apps/getting-started/create) tutorial in our developer documentation will guide you through creating a Shopify app using this template.
-
-The Node app template comes with the following out-of-the-box functionality:
-
-- OAuth: Installing the app and granting permissions
-- GraphQL Admin API: Querying or mutating Shopify admin data
-- REST Admin API: Resource classes to interact with the API
-- Shopify-specific tooling:
-  - AppBridge
-  - Polaris
-  - Webhooks
+This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and Vue. I couldn't find a boilerplate code for that specific configuration, so I created this boilerplate project to serve as a starting point
 
 ## Tech Stack
 
 This template combines a number of third party open-source tools:
 
 - [Express](https://expressjs.com/) builds the backend.
-- [Vite](https://vitejs.dev/) builds the [React](https://reactjs.org/) frontend.
-- [React Router](https://reactrouter.com/) is used for routing. We wrap this with file-based routing.
-- [React Query](https://react-query.tanstack.com/) queries the Admin API.
+- [Vite](https://vitejs.dev/) builds the [Vue](https://vuejs.org/) frontend.
 
 The following Shopify tools complement these third-party tools to ease app development:
 
 - [Shopify API library](https://github.com/Shopify/shopify-node-api) adds OAuth to the Express backend. This lets users install the app and grant scope permissions.
-- [App Bridge React](https://shopify.dev/docs/apps/tools/app-bridge/getting-started/using-react) adds authentication to API requests in the frontend and renders components outside of the App’s iFrame.
-- [Polaris React](https://polaris.shopify.com/) is a powerful design system and component library that helps developers build high quality, consistent experiences for Shopify merchants.
 - [Custom hooks](https://github.com/Shopify/shopify-frontend-template-react/tree/main/hooks) make authenticated requests to the Admin API.
-- [File-based routing](https://github.com/Shopify/shopify-frontend-template-react/blob/main/Routes.jsx) makes creating new pages easier.
 
 ## Getting started
 
@@ -47,50 +26,14 @@ The following Shopify tools complement these third-party tools to ease app devel
 
 This template can be installed using your preferred package manager:
 
-Using yarn:
-
-```shell
-yarn create @shopify/app
-```
-
 Using npm:
 
 ```shell
-npm init @shopify/app@latest
-```
-
-Using pnpm:
-
-```shell
-pnpm create @shopify/app@latest
-```
-
-This will clone the template and install the required dependencies.
-
-#### Local Development
-
-[The Shopify CLI](https://shopify.dev/docs/apps/tools/cli) connects to an app in your Partners dashboard. It provides environment variables, runs commands in parallel, and updates application URLs for easier development.
-
-You can develop locally using your preferred package manager. Run one of the following commands from the root of your app.
-
-Using yarn:
-
-```shell
-yarn dev
-```
-
-Using npm:
-
-```shell
+npm i
 npm run dev
 ```
 
-Using pnpm:
-
-```shell
-pnpm run dev
-```
-
+This will install the required dependencies and start the server.
 Open the URL generated in your console. Once you grant permission to the app, you can start development.
 
 ## Deployment

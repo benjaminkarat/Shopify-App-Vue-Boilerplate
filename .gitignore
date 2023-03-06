@@ -1,6 +1,10 @@
 # Environment Configuration
 .env
 .env.*
+*.env
+.vscode
+
+web/frontend/.env
 
 # Dependency directory
 node_modules
